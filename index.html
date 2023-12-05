@@ -1,0 +1,592 @@
+<!DOCTYPE html
+    PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0045)http://6.869.csail.mit.edu/fa19/schedule.html -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+<link href="https://fonts.cdnfonts.com/css/caveat" rel="stylesheet">
+<style>
+    @import url('https://fonts.cdnfonts.com/css/caveat');
+</style>
+<!-- <script src="./assets/teaser-data.js"></script> -->
+
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Drag-A-Video</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+    <meta name="description"
+        content="Project page for &#39;Drag-A-Video: Non-rigid Video Editing with Point-based Interaction.&#39;">
+    <!-- <link rel="icon" href="./assets/showlab.ico"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <style>
+
+    </style>
+
+</head>
+
+<body>
+    <p class="title">Drag-A-Video: <br> Non-rigid Video Editing with Point-based Interaction</p>
+    <p class="author">
+        <span class="author">
+            <a href="https://tyshiwo1.github.io/">Yao Teng</a><sup>1</sup>
+        </span>
+        <span class="author">
+            <a href="https://xieenze.github.io/">Enze Xie</a><sup>2</sup>
+        </span>
+        <span class="author">
+            <a href="https://yuewuhkust.github.io/">Yue Wu</a><sup>2</sup>
+        </span>
+        <span class="author">
+            <a href="https://github.com/AndresGriffindor">Haoyu Han</a><sup>3</sup>
+        </span>
+        <span class="author">
+            <a href="https://scholar.google.com.sg/citations?user=XboZC1AAAAAJ&hl=en">Zhenguo Li</a><sup>2</sup>
+        </span>
+        <span class="author">
+            <a href="https://xh-liu.github.io/">Xihui Liu</a><sup>1</sup>
+        </span>
+    </p>
+
+    <p class="affiliations">
+        <span class="author"><sup>1 </sup>The University of Hong Kong</span>
+        <span class="author"><sup>2 </sup>Huawei Noah's Ark Lab</span>
+        <span class="author"><sup>3 </sup>Tsinghua University</span>
+    </p>
+
+    <p class="menu">
+        <a style="color: steelblue" href="">[Paper]</a> 
+        <a style="color: black">[Code]</a>
+    </p>
+
+    <div class="container">
+        <table width="1080px" border="0" align="center">
+            <tbody>
+                <tr>
+                    <div id="imageCarousel" class="carousel slide teaser-carousel" data-ride="carousel" data-interval="5000">
+                        <div class="carousel-inner">
+                            <!-- Basketball -->
+                            <div class="carousel-item active">
+                                <div>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="rabit_gt" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/data/rabit.mp4" type="video/mp4"> 
+                                        sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                    <span style="font-size: 150%; display: inline-block; vertical-align: middle;">+</span> 
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="rabit_signal" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/signal/rabit1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                    <span style="font-size: 150%; display: inline-block; vertical-align: middle;">→</span> 
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="rabit_drag" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/results/rabit1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video>
+                                </div> 
+                                <br />
+                                <div>
+                                    
+                                    <div class="caption" id="rabit_text">
+                                        "Rabit"
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="beer_gt" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/data/beer.mp4" type="video/mp4"> 
+                                        sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                    <span style="font-size: 150%; display: inline-block; vertical-align: middle;">+</span> 
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="beer_signal" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/signal/beer1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                    <span style="font-size: 150%; display: inline-block; vertical-align: middle;">→</span> 
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="beer_drag" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/results/beer1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video>
+                                </div>
+                                <br />
+                                <div>
+                                    
+                                    <div class="caption" id="beer_text">
+                                        "Beer Cup"
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+
+                            <div class="carousel-item">
+                                <div>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="wolf_gt" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/data/wolf.mp4" type="video/mp4"> 
+                                        sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                    <span style="font-size: 150%; display: inline-block; vertical-align: middle;">+</span> 
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="wolf_signal" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/signal/wolf1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                    <span style="font-size: 150%; display: inline-block; vertical-align: middle;">→</span> 
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="wolf_drag" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/results/wolf1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video>
+                                </div>
+                                <br />
+                                <div>
+                                    
+                                    <div class="caption" id="wolf_text">
+                                        "Wolf"
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="carousel-item">
+                                <div>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="tower_gt" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/data/eiffel.mp4" type="video/mp4"> 
+                                        sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                    <span style="font-size: 150%; display: inline-block; vertical-align: middle;">+</span> 
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="tower_signal" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/signal/eiffel1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                    <span style="font-size: 150%; display: inline-block; vertical-align: middle;">→</span> 
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="tower_drag" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/results/eiffel1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video>
+                                </div>
+                                <br />
+                                <div>
+                                    
+                                    <div class="caption" id="tower_text">
+                                        "Eiffel Tower"
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                        </div>
+                        <a class="carousel-control-prev" href="#imageCarousel" role="button" data-slide="prev">
+                            <div class="slider-navigation-previous">
+                                <svg viewBox="0 0 50 80" xml:space="preserve">
+                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                        stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
+                                    </polyline>
+                                </svg>
+                            </div>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="carousel-control-next" href="#imageCarousel" role="button" data-slide="next">
+                            <div class="slider-navigation-next">
+                                <svg viewBox="0 0 50 80" xml:space="preserve">
+                                    <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                        stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
+                                    </polyline>
+                                </svg>
+                            </div>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+                </tr>
+                <tr> <br /> </tr>
+                <tr align="center"></tr>
+            </tbody>
+        </table>
+        &nbsp;
+        <p class="section">&nbsp;</p>
+
+        <p style="text-align: center;"><span class="section"><b>Abstract</b></span></p>
+        <p style="text-align: justify; display: flex; justify-content: center; max-width: 800px; margin:auto"> 
+            Video editing is a challenging task that requires manipulating videos on both the spatial and temporal dimensions. Existing methods for video editing mainly focus on changing the appearance or style of the objects in the video, while keeping their structures unchanged. However, there is no existing method that allows users to interactively "drag" any points of instances on the first frame to precisely reach the target points with other frames consistently deformed. In this paper, we propose a new diffusion-based method for interactive point-based video manipulation, called Drag-A-Video. Our method allows users to click pairs of handle points and target points as well as masks on the first frame of an input video. Then, our method transforms the inputs into point sets and propagates these sets across frames. To precisely modify the contents of the video, we employ a new video-level motion supervision to update the features of the video and introduce the latent offsets to achieve this update at multiple denoising timesteps. We propose a temporal-consistent point tracking module to coordinate the movement of the points in the handle point sets. We demonstrate the effectiveness and flexibility of our method on various videos. Codes will be released upon acceptance.
+        <p class="section">&nbsp;</p>
+
+        <p class="section"><b>Method</b></p>
+        <div style="text-align: center">
+            <!--
+                <img src="./assets/framework.png" alt="" width="800px" style="max-width: 100%; height: auto;" />
+            -->
+            <video onloadstart="this.playbackRate = 1.0;" poster="" id="tower_gt" autoplay muted loop playsinline height="100%" width="75%" style="display: inline-block; vertical-align: middle;"> 
+                <source src="./assets/video/res_vid_page.mp4" type="video/mp4"> 
+                sorry, your browser does not support HTML5 Videos. 
+            </video> 
+        </div>
+        </br>
+        <p style="text-align: center">
+            <em>The first framework for video-level point-based manipulation.</em>
+        </p>
+        
+        <p class="section">&nbsp;</p>
+
+        <p class="section"><b>Results</b></p>
+
+        </br>
+        <div class="container" style="min-height: 224px"> 
+            <div id="resultCarousel1" class="carousel slide" data-ride="carousel" data-interval="5000">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <table width="800px" align="center">
+                            <tbody>
+                                <tr>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="waterfall_gt" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/data/waterfall.mp4" type="video/mp4"> 
+                                        sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                </tr>
+                                &ensp;
+                                <tr>
+                                    <video hspace="10" onloadstart="this.playbackRate = 0.95;" poster="" id="waterfall_signal" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/signal/waterfall1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                </tr>
+                                &ensp;
+                                <tr>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="waterfall_drag" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/results/waterfall1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video>
+                                </tr>
+                                <tr>
+
+                                    <!-- <div class="caption" id="waterfall_text">
+                                        "Waterfall"
+                                    </div> -->
+                                    <th><div class="caption">"Waterfall"</div></th>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="carousel-item">
+                        <table width="1080px" align="center">
+                            <tbody>
+                                <tr>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="icewaterfall_gt" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/data/icewaterfall.mp4" type="video/mp4"> 
+                                        sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                </tr>
+                                &ensp;
+                                <tr>
+                                    <video hspace="10" onloadstart="this.playbackRate = 0.95;" poster="" id="icewaterfall_signal" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/signal/icewaterfall1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                </tr>
+                                &ensp;
+                                <tr>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="icewaterfall_drag" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/results/icewaterfall1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video>
+                                </tr>
+                                <tr>
+
+                                    <!-- <div class="caption" id="waterfall_text">
+                                        "Waterfall"
+                                    </div> -->
+                                    <th><div class="caption">"Glacier Falls"</div></th>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="carousel-item">
+                        <table width="1080px" align="center">
+                            <tbody>
+                                <tr>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="tofu_gt" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/data/tofu.mp4" type="video/mp4"> 
+                                        sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                </tr>
+                                &ensp;
+                                <tr>
+                                    <video hspace="10" onloadstart="this.playbackRate = 0.95;" poster="" id="tofu_signal" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/signal/tofu1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                </tr>
+                                &ensp;
+                                <tr>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="tofu_drag" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/results/tofu1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video>
+                                </tr>
+                                <tr>
+
+                                    <th><div class="caption">"Tofu"</div></th>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+                    
+
+                <a class="carousel-control-prev" href="#resultCarousel1" role="button" data-slide="prev">
+                    <div class="slider-navigation-previous" style="top: 40%">
+                        <svg viewBox="0 0 50 80" xml:space="preserve">
+                            <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
+                            </polyline>
+                        </svg>
+                    </div>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#resultCarousel1" role="button" data-slide="next">
+                    <div class="slider-navigation-next" style="top: 40%">
+                        <svg viewBox="0 0 50 80" xml:space="preserve">
+                            <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
+                            </polyline>
+                        </svg>
+                    </div>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        </br>
+
+        <div class="container" style="min-height: 224px">
+            <!-- <p style="text-align: center; font-size: 150%">Protagonist Editing</p> -->
+            <div id="resultCarousel2" class="carousel slide" data-ride="carousel" data-interval="5000">
+                <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                        <table width="800px" align="center">
+                            <tbody>
+                                <tr>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="surf_big_gt" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/data/surf_big.mp4" type="video/mp4"> 
+                                        sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                </tr>
+                                &ensp;
+                                <tr>
+                                    <video hspace="10" onloadstart="this.playbackRate = 0.95;" poster="" id="surf_big_signal" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/signal/surf_big1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                </tr>
+                                &ensp;
+                                <tr>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="surf_big_drag" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/results/surf_big1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video>
+                                </tr>
+                                <tr>
+
+                                    <th><div class="caption">"Surfer"</div></th>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="carousel-item">
+                        <table width="800px" align="center">
+                            <tbody>
+                                <tr>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="skier_gt" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/data/skier.mp4" type="video/mp4"> 
+                                        sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                </tr>
+                                &ensp;
+                                <tr>
+                                    <video hspace="10" onloadstart="this.playbackRate = 0.95;" poster="" id="skier_signal" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/signal/skier1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                </tr>
+                                &ensp;
+                                <tr>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="skier_drag" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/results/skier1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video>
+                                </tr>
+                                <tr>
+                                    
+                                    <th><div class="caption">"Skier"</div></th>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="carousel-item">
+                        <table width="800px" align="center">
+                            <tbody>
+                                <tr>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="surf_gt" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/data/surf.mp4" type="video/mp4"> 
+                                        sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                </tr>
+                                &ensp;
+                                <tr>
+                                    <video hspace="10" onloadstart="this.playbackRate = 0.95;" poster="" id="surf_signal" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/signal/surf1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                </tr>
+                                &ensp;
+                                <tr>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="surf_drag" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/results/surf1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video>
+                                </tr>
+                                <tr>
+                                    
+                                    <th><div class="caption">"Surfer"</div></th>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="carousel-item">
+                        <table width="800px" align="center">
+                            <tbody>
+                                <tr>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="mouth_gt" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/data/mouth.mp4" type="video/mp4"> 
+                                        sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                </tr>
+                                &ensp;
+                                <tr>
+                                    <video hspace="10" onloadstart="this.playbackRate = 0.95;" poster="" id="mouth_signal" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/signal/mouth1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video> 
+                                </tr>
+                                &ensp;
+                                <tr>
+                                    <video onloadstart="this.playbackRate = 0.95;" poster="" id="mouth_drag" autoplay muted loop playsinline height="100%" width="25%" style="display: inline-block; vertical-align: middle;"> 
+                                        <source src="./assets/results/mouth1.mp4" type="video/mp4"> sorry, your browser does not support HTML5 Videos. 
+                                    </video>
+                                </tr>
+                                <tr>
+                                    
+                                    <th><div class="caption">"Singer"</div></th>
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <a class="carousel-control-prev" href="#resultCarousel2" role="button" data-slide="prev">
+                    <div class="slider-navigation-previous" style="top: 40%">
+                        <svg viewBox="0 0 50 80" xml:space="preserve">
+                            <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                stroke-linejoin="round" points="45.63,75.8 0.375,38.087 45.63,0.375 ">
+                            </polyline>
+                        </svg>
+                    </div>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#resultCarousel2" role="button" data-slide="next">
+                    <div class="slider-navigation-next" style="top: 40%">
+                        <svg viewBox="0 0 50 80" xml:space="preserve">
+                            <polyline fill="white" stroke-width=".5em" stroke-linecap="round"
+                                stroke-linejoin="round" points="0.375,0.375 45.63,38.087 0.375,75.8 ">
+                            </polyline>
+                        </svg>
+                    </div>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+
+        </br>
+
+
+        <p class="section">&nbsp;</p>
+
+
+        <p class="section" id="bibtex"><b>Bibtex</b></p>
+        <table border="0">
+            <tbody>
+                <pre style=" display: block;
+                    background: #eee;
+                    white-space: pre;
+                    -webkit-overflow-scrolling: touch;
+                    max-width: 100%;
+                    min-width: 100px;
+                    border-radius: 20px;
+                    ">
+
+    @article{ , 
+    }       
+			    </pre>
+            </tbody>
+        </table>
+        
+    </div>
+
+    <footer class="footer">
+        <p style="text-align: center;">
+            This page was adapted from <a href="https://tuneavideo.github.io/">Tune-A-Video</a>.
+        </p>
+    </footer>
+
+
+</body>
+
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-WLX2Z5QLG8');
+ </script>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+ <script type="text/javascript">
+    $(document).ready(function () {
+
+        if (localStorage.getItem("my_app_name_here-quote-scroll") != null) {
+            $(window).scrollTop(localStorage.getItem("my_app_name_here-quote-scroll"));
+        }
+
+        $(window).on("scroll", function() {
+            localStorage.setItem("my_app_name_here-quote-scroll", $(window).scrollTop());
+        });
+
+      });
+ </script>
+
+ <script>
+    function prompt_on(prompt_element) {
+        prompt_element.classList.add("caption-active");
+    }
+
+    function prompt_off(prompt_element) {
+        prompt_element.classList.remove("caption-active");
+    }
+
+    function toggle_prompt(active_prompt_id, inactive_prompt_ids, result_id) {
+        let active_prompt = document.getElementById(active_prompt_id);
+        prompt_on(active_prompt);
+        for (let i = 0; i < inactive_prompt_ids.length; i++) {
+            let inactive_prompt = document.getElementById(inactive_prompt_ids[i]);
+            prompt_off(inactive_prompt);
+        }
+
+        let result = document.getElementById(result_id);
+        result.src = file_paths[active_prompt_id];
+    }
+
+    function toggle_prompts(active_prompt_id1, active_prompt_id2, inactive_prompt_ids1, inactive_prompt_ids2, result_id1, result_id2 ) {
+    toggle_prompt(active_prompt_id1, inactive_prompt_ids1, result_id1);
+    toggle_prompt(active_prompt_id2, inactive_prompt_ids2, result_id2);
+    }
+
+
+ </script>
+
+ <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</html>
